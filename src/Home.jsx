@@ -1,5 +1,9 @@
+import Menu from "./Componentes/Menu";
 export default function Home(){
     return(
-        <h1>PTAC 2 - PROJETO FINAL</h1>
+        <div>
+             <i> <h1>Loja de videos</h1> </i>
+             <Menu/>
+        </div>
      );
 }
