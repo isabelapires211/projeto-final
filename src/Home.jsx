@@ -6,7 +6,6 @@ export default function Home(){
              <i> <h1>Loja de videos</h1> </i>
              <Menu/>
              <Destaque/>
-             <Destaque/>
         </div>
      );
 }
