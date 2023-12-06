@@ -1,4 +1,4 @@
-export default function Deataque() {
+export default function Detalhe() {
     return (
         <h1>Destaque</h1>
     );
