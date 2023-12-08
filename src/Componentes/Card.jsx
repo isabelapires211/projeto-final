@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Card({videos}){
  
     return(
@@ -15,7 +17,8 @@ export default function Card({videos}){
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
-                  </iframe>         
+                  </iframe>
+                  <Link to={`/detalhe/${videos.id}`}><button>Mais Informações</button></Link>
 
              </div>   
     )
