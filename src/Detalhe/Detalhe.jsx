@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Card from '../Componentes/Card'
+import CardDEtalhe from "../Componentes/CardDetalhe";
 export default function Detalhe() {
 
             const { id } = useParams();
@@ -16,7 +16,7 @@ export default function Detalhe() {
         
             return(
             <div>
-            <Card videos ={atividade[0]}/>
+            <CardDEtalhe videos ={atividade[0]}/>
             </div>
             );  
         
