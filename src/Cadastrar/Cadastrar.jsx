@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 export default function Cadastrar() {
+  const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
   const [canal, setCanal] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [data, setData] = useState("");
-  const [id, setId] = useState(1); 
+  const [id, setId] = useState(listaLocalStorage[listaLocalStorage.lenght - 1]?.id + 1 || 1); 
   const [link, setLink] = useState("")
-  const [lista, setLista] = useState([]);
+  const [lista, setLista] = useState(listaLocalStorage);
+  
 
   useEffect(() => {
     localStorage.setItem("Lista", JSON.stringify(lista));
@@ -73,17 +75,7 @@ export default function Cadastrar() {
         <button type="submit">Salvar</button>
       </form>
       </div>
-      {lista.map((videos) => 
-            <div className="list-video">
-                 <p>{videos.titulo}</p>
-                 <p>{videos.descricao}</p>
-                 <p>{videos.canal}</p>
-                 <p>{videos.playlist}</p>
-                 <p>{videos.data}</p>
-             </div>   
-            )}
-
-
+     
     </div>
   );
 }
