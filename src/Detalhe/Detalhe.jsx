@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import CardDEtalhe from "../Componentes/CardDetalhe";
 import Menu from "../Componentes/Menu"
+
 export default function Detalhe() {
 
             const { id } = useParams();
