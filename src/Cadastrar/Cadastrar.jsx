@@ -46,6 +46,7 @@ export default function Cadastrar() {
 
   return (
     <div>
+      <div>
       <form onSubmit={salvar}>
         
           <h2>Título:</h2>
@@ -71,6 +72,18 @@ export default function Cadastrar() {
        
         <button type="submit">Salvar</button>
       </form>
+      </div>
+      {lista.map((videos) => 
+            <div className="list-video">
+                 <p>{videos.titulo}</p>
+                 <p>{videos.descricao}</p>
+                 <p>{videos.canal}</p>
+                 <p>{videos.playlist}</p>
+                 <p>{videos.data}</p>
+             </div>   
+            )}
+
+
     </div>
   );
 }
