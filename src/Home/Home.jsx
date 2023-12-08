@@ -1,5 +1,6 @@
-import Card from "../Componentes/Card"
-import Menu from '../Componentes/Menu'
+import Card from "../Componentes/Card";
+import Menu from '../Componentes/Menu';
+import "../styles.css"
 export default function Home(){
 
   const lista = JSON.parse(localStorage.getItem("Lista"))
