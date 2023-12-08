@@ -7,7 +7,7 @@ export default function Cadastrar() {
   const [playlist, setPlaylist] = useState("");
   const [data, setData] = useState("");
   const [id, setId] = useState(1); 
-
+  const [link, setLink] = useState("")
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
@@ -31,6 +31,7 @@ export default function Cadastrar() {
         playlist: playlist,
         data: data,
         id: id,
+        link: link
       },
     ]);
 
@@ -40,36 +41,34 @@ export default function Cadastrar() {
     setPlaylist("");
     setData("");
     setId(id + 1); 
+    setLink("")
   };
 
   return (
     <div>
       <form onSubmit={salvar}>
-        <label>
-          Título:
+        
+          <h2>Título:</h2>
           <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Descrição:
-          <textarea value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Canal:
+      
+          <h2>Descrição:</h2>
+          <input type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+        
+          <h2>Canal:</h2>
           <input type="text" value={canal} onChange={(e) => setCanal(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Playlist:
+
+        
+          <h2>Playlist:</h2>
           <input type="text" value={playlist} onChange={(e) => setPlaylist(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Data:
+    
+        
+          <h2>Data:</h2>
           <input type="text" value={data} onChange={(e) => setData(e.target.value)} />
-        </label>
-        <br />
+      
+        
+          <h2>Link:</h2>
+          <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
+       
         <button type="submit">Salvar</button>
       </form>
     </div>
