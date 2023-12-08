@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Menu from "../Componentes/Menu"  
 
 export default function Cadastrar() {
   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
@@ -48,6 +49,7 @@ export default function Cadastrar() {
 
   return (
     <div>
+      <Menu/>
       <div>
       <form onSubmit={salvar}>
         

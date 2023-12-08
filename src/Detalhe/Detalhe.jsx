@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import CardDEtalhe from "../Componentes/CardDetalhe";
+import Menu from "../Componentes/Menu"
 export default function Detalhe() {
 
             const { id } = useParams();
@@ -16,6 +17,7 @@ export default function Detalhe() {
         
             return(
             <div>
+            <Menu/>
             <CardDEtalhe videos ={atividade[0]}/>
             </div>
             );  
