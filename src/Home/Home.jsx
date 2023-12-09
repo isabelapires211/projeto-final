@@ -4,10 +4,10 @@ import "../styles.css"
 export default function Home(){
 
   const lista = JSON.parse(localStorage.getItem("Lista"))
-
+  
   return(
     <div>
-
+      
       <Menu/>
 
       {lista.map((cortes) => 
@@ -18,4 +18,7 @@ export default function Home(){
 
       </div>
   )
+
+  
+ 
 }

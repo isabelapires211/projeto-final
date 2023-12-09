@@ -1,7 +1,7 @@
 export default function CardDEtalhe({cortes}){
  
     return(
-            <div className="list-video">
+            <div className="list-cortes">
                  <p>{cortes.titulo}</p>
                  <p>{cortes.descricao}</p>
                  <p>{cortes.canal}</p>
