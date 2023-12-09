@@ -7,9 +7,9 @@ export default function Detalhe() {
             const { id } = useParams();
             const lista = JSON.parse(localStorage.getItem("Lista"));
         
-            const atividade = lista.filter((videos)=>{
-            if(videos.id == id){
-            return videos;
+            const atividade = lista.filter((cortes)=>{
+            if(cortes.id == id){
+            return cortes;
             }
             return null;
             }); 
@@ -19,7 +19,7 @@ export default function Detalhe() {
             return(
             <div>
             <Menu/>
-            <CardDEtalhe videos ={atividade[0]}/>
+            <CardDEtalhe cortes ={atividade[0]}/>
             </div>
             );  
         
