@@ -6,9 +6,11 @@ export default function Menu() {
 
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                 <div class="bg-dark p-4">
-                    <p><Link to={'/'}>Início</Link></p>
+
+                    <p><Link to={'/'}>Home</Link></p>
                     <p><Link to={'/cadastrar'}>Cadastrar</Link></p>
                     <p><Link to={'/destaque'}>Destaques</Link></p>
+                    
                 </div>
             </div>
 
@@ -22,4 +24,4 @@ export default function Menu() {
 
         </div>
     );
-} 
+}

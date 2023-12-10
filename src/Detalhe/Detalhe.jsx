@@ -3,24 +3,25 @@ import CardDEtalhe from "../Componentes/CardDetalhe";
 import Menu from "../Componentes/Menu"
 
 export default function Detalhe() {
+    const { id } = useParams();
+    const listar = JSON.parse(localStorage.getItem("Lista"));
+        
+    const mostraVideo= listar.filter((cortes)=>{
 
-            const { id } = useParams();
-            const lista = JSON.parse(localStorage.getItem("Lista"));
-        
-            const atividade = lista.filter((cortes)=>{
-            if(cortes.id == id){
-            return cortes;
-            }
-            return null;
-            }); 
-        
-            console.log(atividade[0]);
-        
-            return(
-            <div>
-            <Menu/>
-            <CardDEtalhe cortes ={atividade[0]}/>
-            </div>
-            );  
-        
+    if(cortes.id == id){
+         return cortes;
+
         }
+         return null;
+    
+       })
+
+         console.log(mostraVideo[0]);
+            return(
+              <div>
+              <Menu/>
+              <CardDEtalhe cortes ={mostraVideo[0]}/>
+              </div>
+             );  
+        
+        };

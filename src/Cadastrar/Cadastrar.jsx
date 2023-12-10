@@ -3,16 +3,15 @@ import Menu from "../Componentes/Menu";
 
 export default function Cadastrar() {
   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
+  const [id, setId] = useState(listaLocalStorage[listaLocalStorage.lenght - 1]?.id + 1 || 1); 
+  const [lista, setLista] = useState(listaLocalStorage);
   const [titulo, setTitulo] = useState("");
-  const [descricao, setDescricao] = useState("");
   const [canal, setCanal] = useState("");
+  const [link, setLink] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [data, setData] = useState("");
-  const [id, setId] = useState(listaLocalStorage[listaLocalStorage.lenght - 1]?.id + 1 || 1); 
-  const [link, setLink] = useState("")
-  const [lista, setLista] = useState(listaLocalStorage);
+  const [descricao, setDescricao] = useState("");
   
-
   useEffect(() => {
     localStorage.setItem("Lista", JSON.stringify(lista));
   }, [lista]);
